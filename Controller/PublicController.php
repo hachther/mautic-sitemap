@@ -24,6 +24,6 @@ class PublicController extends CommonController
         $model = $this->getModel('page');
         $pages = $model->getRepository()->getPageList('', 0, 0, true, 'variant', []);
 
-        return $this->render("MauticHachtherBundle:Public:sitemap.$format.php", ['pages' => $pages, 'model' => $model]);
+        return $this->render("MauticSitemapBundle:Public:sitemap.$format.php", ['pages' => $pages, 'model' => $model]);
     }
 }
